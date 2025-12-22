@@ -42,4 +42,11 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+// Expandable sections (accordion)
+document.querySelectorAll(".expandable h2").forEach(header => {
+  header.addEventListener("click", () => {
+    header.parentElement.classList.toggle("open");
+  });
+});
+
 
