@@ -141,5 +141,10 @@ footer {
   background: rgba(56, 189, 248, 0.15);
   color: #7dd3fc;
 }
+nav a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
 
 
