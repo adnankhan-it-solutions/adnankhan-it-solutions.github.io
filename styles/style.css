@@ -145,6 +145,34 @@ nav a.active {
   color: #38bdf8;
   border-bottom: 2px solid #38bdf8;
 }
+/* Expandable sections */
+.expandable .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.expandable.open .details {
+  max-height: 300px;
+}
+
+.expandable h2 {
+  cursor: pointer;
+  position: relative;
+}
+
+.expandable h2::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  color: #38bdf8;
+}
+
+.expandable.open h2::after {
+  content: "–";
+}
+
 
 
 
