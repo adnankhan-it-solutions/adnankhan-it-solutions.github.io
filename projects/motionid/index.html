@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MotionID — Behavioral Biometric Security</title>
 
   <link rel="stylesheet" href="motionid.css" />
@@ -26,27 +26,27 @@
     }
 
     header h1 {
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-size: clamp(3rem, 5vw, 4.5rem);
       background: linear-gradient(90deg, #00f5ff, #7b7bff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     header p {
-      max-width: 720px;
+      max-width: 760px;
       margin: 1.5rem auto;
-      font-size: 1.15rem;
-      opacity: 0.92;
+      font-size: 1.2rem;
+      opacity: 0.95;
     }
 
     section {
       padding: 5rem 1.5rem;
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
     }
 
     section h2 {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 1.2rem;
       color: #7b7bff;
     }
@@ -55,22 +55,31 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 18px;
-      padding: 2.2rem;
+      padding: 2.3rem;
       margin-top: 2rem;
       transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.45);
     }
 
-    ul {
-      padding-left: 1.3rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+      margin-top: 2rem;
     }
 
-    li {
-      margin-bottom: 0.7rem;
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      background: rgba(123,123,255,0.15);
+      border: 1px solid rgba(123,123,255,0.4);
+      border-radius: 999px;
+      margin: 0.3rem;
+      font-size: 0.85rem;
     }
 
     footer {
@@ -84,96 +93,121 @@
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div>
-      <h1>MotionID</h1>
-      <p>
-        Continuous mobile authentication powered by behavioral biometrics and machine learning —
-        securing devices beyond static passwords.
-      </p>
-    </div>
-  </header>
+<!-- HERO -->
+<header>
+  <div>
+    <h1>MotionID</h1>
+    <p>
+      A next-generation mobile security platform using behavioral biometrics and machine learning
+      to continuously authenticate users beyond passwords.
+    </p>
+  </div>
+</header>
 
-  <!-- PROBLEM -->
-  <section>
-    <h2>The Problem</h2>
-    <div class="card">
-      <p>
-        Mobile devices rely on static authentication mechanisms such as PINs and passwords.
-        Once compromised, attackers gain unrestricted access.
-      </p>
-      <p>
-        Current systems cannot distinguish between a legitimate owner and an impersonator who knows the password.
-      </p>
-    </div>
-  </section>
+<!-- PROBLEM -->
+<section>
+  <h2>The Problem</h2>
+  <div class="card">
+    <p>
+      Static authentication methods such as PINs and passwords fail once compromised.
+      Mobile devices cannot distinguish between legitimate owners and impersonators.
+    </p>
+    <p>
+      This creates critical security risks for banking, government services, and enterprise systems.
+    </p>
+  </div>
+</section>
 
-  <!-- SOLUTION -->
-  <section>
-    <h2>Our Solution</h2>
-    <div class="card">
-      <p>
-        MotionID introduces <strong>behavioral biometric authentication</strong> that continuously verifies
-        users based on how they interact with their devices.
-      </p>
-      <p>
-        By leveraging machine learning, MotionID learns unique behavioral patterns such as typing rhythm,
-        touch pressure, and device handling dynamics.
-      </p>
-    </div>
-  </section>
+<!-- SOLUTION -->
+<section>
+  <h2>Our Solution</h2>
+  <div class="card">
+    <p>
+      MotionID enables <strong>continuous authentication</strong> by analyzing how users interact
+      with their devices — not just what credentials they enter.
+    </p>
+    <p>
+      Using machine learning, MotionID builds a unique behavioral identity based on typing dynamics,
+      touch pressure, and device motion patterns.
+    </p>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section>
-    <h2>How MotionID Works</h2>
-    <div class="card">
-      <ul>
-        <li>User enters a password to unlock the device</li>
-        <li>Behavioral interaction data is captured in real time</li>
-        <li>Machine learning model compares new data with stored behavioral profiles</li>
-        <li>Access is granted only if behavior matches the legitimate owner</li>
-        <li>Continuous authentication during active device usage</li>
-      </ul>
-    </div>
-  </section>
+<!-- ARCHITECTURE -->
+<section>
+  <h2>System Architecture</h2>
+  <div class="card">
+    <p>
+      MotionID integrates seamlessly with mobile platforms to provide real-time behavioral authentication.
+    </p>
+    <ul>
+      <li>Behavioral data captured during password entry & usage</li>
+      <li>Feature extraction (keystroke timing, pressure, motion)</li>
+      <li>ML model trained on owner’s behavioral profile</li>
+      <li>Continuous verification during active sessions</li>
+      <li>Immediate detection of anomalous behavior</li>
+    </ul>
+    <p><em>(Architecture diagram to be added here)</em></p>
+  </div>
+</section>
 
-  <!-- APPLICATIONS -->
-  <section>
-    <h2>Applications & Markets</h2>
-    <div class="card">
-      <ul>
-        <li>Mobile lock screens</li>
-        <li>Mobile banking authentication</li>
-        <li>Secure enterprise applications</li>
-        <li>Metrash2 and government services (Qatar)</li>
-        <li>POS terminals (single-user scenarios)</li>
-        <li>ATM authentication systems</li>
-      </ul>
-    </div>
-  </section>
+<!-- DEMO -->
+<section>
+  <h2>Product Demo & Visuals</h2>
+  <div class="grid">
+    <div class="card">Mobile App UI Demo (Coming Soon)</div>
+    <div class="card">Behavioral Pattern Visualization</div>
+    <div class="card">Attack vs Genuine User Comparison</div>
+  </div>
+</section>
 
-  <!-- FOUNDER -->
-  <section>
-    <h2>Founder & Credibility</h2>
-    <div class="card">
-      <p>
-        MotionID is founded by <strong>Adnan Khan</strong>, PhD in Computer Science,
-        researcher in machine learning and cybersecurity, multiple award winner at
-        HBKU & Qatar Foundation, and incubatee at Qatar Science & Technology Park (QSTP).
-      </p>
-      <p>
-        MotionID bridges academic research with real-world mobile security challenges.
-      </p>
-    </div>
-  </section>
+<!-- MARKETS -->
+<section>
+  <h2>Applications & Markets</h2>
+  <div class="card">
+    <ul>
+      <li>Mobile banking & fintech applications</li>
+      <li>Government services (e.g., Metrash2 – Qatar)</li>
+      <li>Enterprise mobile security</li>
+      <li>POS terminals & ATMs</li>
+      <li>High-security single-user systems</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 MotionID · Reinventing Mobile Security Through Behavior
-  </footer>
+<!-- CREDIBILITY -->
+<section>
+  <h2>Credibility & Recognition</h2>
+  <div class="card">
+    <span class="badge">HBKU Leadership Award 2023</span>
+    <span class="badge">HBKU Student Innovation Award 2023</span>
+    <span class="badge">CSE Innovation & Entrepreneurship Award</span>
+    <span class="badge">HBKU Ideation Award 2025</span>
+    <span class="badge">QSTP Incubatee</span>
+    <span class="badge">Qatar Foundation</span>
+  </div>
+</section>
 
-  <script src="motionid.js"></script>
+<!-- INVESTOR -->
+<section>
+  <h2>Founder & Vision</h2>
+  <div class="card">
+    <p>
+      MotionID is founded by <strong>Adnan Khan</strong>, PhD in Computer Science,
+      researcher in machine learning and cybersecurity, award-winning innovator at HBKU,
+      and incubatee at Qatar Science & Technology Park (QSTP).
+    </p>
+    <p>
+      MotionID’s vision is to redefine mobile security by shifting authentication from
+      static credentials to intelligent, behavior-driven trust.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 MotionID · Behavioral Security for a Trustless World
+</footer>
+
+<script src="motionid.js"></script>
 </body>
 </html>
-
